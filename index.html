@@ -5,6 +5,7 @@
 <meta name="description" content="оценки шапкиса"/>
 <title>Шапкис оценил</title>
 <link rel="stylesheet" href="style2.css">
+<link rel="import" href="movie.html">
 <style type="text/css">
 body {font:12px Verdana, Arial; margin:25px; background-color:#1b2838; color:#acb2b8; text-align: center;}
 
@@ -90,7 +91,11 @@ table tr:nth-child(even) td{background-color:#16202d;}
 	
 	<div id="content_1"><!--Фильмы-->
 		<h1>Фильмы</h1>
-		<table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable" src="movie.html"></table>
+		<script>
+    			  var link = document.querySelector('link[rel=import]');
+    			  var content = link.import.querySelector('#movie');
+    			  document.body.appendChild(content.cloneNode(true));
+		</script>
     </div>
 	
 	<div id="content_2"><!--Сериалы-->
